@@ -1,6 +1,6 @@
 package io.github.bitfist.jcef.spring.example;
 
-import io.github.bitfist.jcef.spring.browser.javascript.JavaScriptCode;
+import io.github.bitfist.jcef.spring.jsexecution.JavaScriptCode;
 
 public interface SomeJavaScript {
 

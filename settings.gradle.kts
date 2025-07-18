@@ -33,7 +33,7 @@ pluginManagement {
         mavenCentral()
     }
     plugins {
-        id("io.github.bitfist.jcef") version "0.1.2"
+        id("io.github.bitfist.jcef") version "0.2.3"
         id("io.github.bitfist.github.repository") version "0.1.5"
     }
 }

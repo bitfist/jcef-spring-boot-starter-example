@@ -12,9 +12,9 @@ group = "io.github.bitfist"
 version = "0.0.1-SNAPSHOT"
 
 repositories {
-    gitHub("bitfist/jcef-spring-boot-starter")
 	mavenLocal()
     mavenCentral()
+    gitHub("bitfist/jcef-spring-boot-starter")
 }
 
 dependencies {
