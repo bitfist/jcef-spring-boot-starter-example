@@ -2,17 +2,17 @@ rootProject.name = "jcef-spring-boot-starter-example"
 
 pluginManagement {
 
-    val gitHubRepositories = mapOf(
-        "jcef-gradle-plugin" to "https://maven.pkg.github.com/bitfist/jcef-gradle-plugin",
-        "gradle-github-support" to "https://maven.pkg.github.com/bitfist/gradle-github-support"
+    val gitHubRepositories = setOf(
+        "jcef-gradle-plugin",
+        "gradle-github-support"
     )
 
     repositories {
         mavenLocal()
-        gitHubRepositories.forEach { (repoName, repoUrl) ->
+        gitHubRepositories.forEach { repository ->
             maven {
-                name = repoName
-                url = uri(repoUrl)
+                name = repository
+                url = uri("https://maven.pkg.github.com/bitfist/$repository")
                 credentials {
                     try {
                         username = settings.extra["GPR_USER"] as String?
