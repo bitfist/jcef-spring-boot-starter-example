@@ -1,6 +1,5 @@
 jcef:
   application-name: "example"
   splash-screen-classpath-resource: splash.png
-  development-options:
-    debug-port: 8888
+  development:
     show-developer-tools: true

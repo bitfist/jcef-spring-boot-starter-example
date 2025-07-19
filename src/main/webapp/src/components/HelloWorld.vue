@@ -3,7 +3,7 @@
 
   <div class="card">
     <button type="button" @click="incrementSimple">simple counter is {{ simpleCounter }}</button>
-    <button type="button" @click="logRandom">random {{ randomCounter }}</button>
+    <button type="button" @click="logRandom">random counter is {{ randomCounter }}</button>
     <button type="button" @click="incrementObject">object counter is {{ objectCounter }}</button>
   </div>
 
@@ -36,6 +36,7 @@ const objectCounter = ref(0)
 const randomCounter = ref(0)
 
 function incrementSimple() {
+  console.log('incrementSimple ' + simpleCounter.value);
   CounterService.simple(simpleCounter.value).then((newCount: number) => {
     simpleCounter.value = newCount
   }).catch(error => {
@@ -43,7 +44,8 @@ function incrementSimple() {
   })
 }
 function incrementObject() {
-  let counter = objectCounter.value + 1;
+  let counter = objectCounter.value;
+  console.log('incrementObject ' + counter);
   CounterService.count(counter, { count: counter } ).then((newCount: CountResponse) => {
     objectCounter.value = newCount.count
   }).catch(error => {

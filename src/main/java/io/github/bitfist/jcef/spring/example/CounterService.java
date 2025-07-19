@@ -20,11 +20,13 @@ class CounterService {
     }
 
     public int simple(int count) {
+        log.info("simple count {}", count);
         return count + 1;
     }
 
     public CountResponse count(int count, CountRequest request) {
-        return new CountResponse(request.count ++);
+        log.info("count {} {}", count, request);
+        return new CountResponse(request.count + 1);
     }
 
     public int random() {
