@@ -4,8 +4,8 @@ plugins {
     java
     alias(libs.plugins.frontend)
     alias(libs.plugins.lombok)
-    id("io.github.bitfist.jcef")
-    id("io.github.bitfist.github.repository")
+    id("io.github.bitfist.jcef-gradle-plugin")
+    id("io.github.bitfist.gradle-github-support.repository")
 }
 
 group = "io.github.bitfist"
