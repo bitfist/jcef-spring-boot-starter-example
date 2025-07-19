@@ -30,7 +30,7 @@ dependencies {
 
 // region Build
 
-jcef {
+springJcef {
     typescriptOutputPath.set(projectDir.resolve("src/main/webapp/src"))
 }
 

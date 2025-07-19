@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import {CounterService} from "../jcef/CounterService.ts";
+import {CounterService} from "../io/github/bitfist/jcef/spring/example/CounterService.ts";
 import type {CountResponse} from "../io/github/bitfist/jcef/spring/example/CountResponse.ts";
 
 defineProps<{ msg: string }>()

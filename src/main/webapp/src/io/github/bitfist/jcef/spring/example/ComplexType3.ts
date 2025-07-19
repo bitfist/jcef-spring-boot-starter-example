@@ -1,4 +1,4 @@
-import type { ComplexType2 } from '../../../../../../jcef/ComplexType2';
+import type { ComplexType2 } from './ComplexType2';
 
 export interface ComplexType3 {
     message: string;

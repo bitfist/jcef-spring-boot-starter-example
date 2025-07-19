@@ -3,3 +3,8 @@ jcef:
   splash-screen-classpath-resource: splash.png
   development:
     show-developer-tools: true
+
+#spring:
+#  threads:
+#    virtual:
+#      enabled: true
