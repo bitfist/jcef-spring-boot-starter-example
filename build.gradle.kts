@@ -14,11 +14,7 @@ repositories {
 }
 
 dependencies {
-    // region Database
-    implementation("org.springframework.boot:spring-boot-starter-jdbc")
-    implementation(libs.sqlite)
-    // endregion
-
+    implementation("org.springframework.boot:spring-boot-starter")
     // region Test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     // endregion
