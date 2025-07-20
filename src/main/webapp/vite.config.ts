@@ -5,4 +5,7 @@ import { viteSingleFile } from 'vite-plugin-singlefile'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue(), viteSingleFile()],
+  server: {
+    port: 3000,
+  }
 })

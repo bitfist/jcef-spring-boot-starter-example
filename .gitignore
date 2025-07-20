@@ -36,5 +36,6 @@ out/
 ### VS Code ###
 .vscode/
 
+.node
 .frontend-gradle-plugin
 debug.log

@@ -1,11 +1,8 @@
-import io.github.bitfist.github.repository.gitHub
-
 plugins {
     java
     alias(libs.plugins.frontend)
     alias(libs.plugins.lombok)
     id("io.github.bitfist.jcef-gradle-plugin")
-    id("io.github.bitfist.gradle-github-support.repository")
 }
 
 group = "io.github.bitfist"
@@ -14,7 +11,6 @@ version = "0.0.1-SNAPSHOT"
 repositories {
 	mavenLocal()
     mavenCentral()
-    gitHub("bitfist/jcef-spring-boot-starter")
 }
 
 dependencies {
@@ -32,6 +28,7 @@ dependencies {
 
 springJcef {
     typescriptOutputPath.set(projectDir.resolve("src/main/webapp/src"))
+//    enableWebCommunication()
 }
 
 java {
@@ -42,16 +39,18 @@ java {
 }
 
 frontend {
-    nodeInstallDirectory.set(file("$rootDir/.gradle/node"))
+    nodeInstallDirectory.set(file("$rootDir/.node"))
     nodeVersion.set(libs.versions.node.get())
     packageJsonDirectory.set(file("$rootDir/src/main/webapp"))
     assembleScript.set("run build --silent")
 }
 
 tasks.register<Copy>("copyUi") {
-    dependsOn(tasks.named("assemble"))
+    group = "frontend"
     from("$projectDir/src/main/webapp/dist")
     into(layout.buildDirectory.dir("resources/main/ui"))
+
+    dependsOn(tasks.named("assemble"))
 }
 
 // endregion
