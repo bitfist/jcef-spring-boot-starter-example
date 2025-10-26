@@ -26,6 +26,6 @@ pluginManagement {
         mavenCentral()
     }
     plugins {
-        id("io.github.bitfist.jcef-gradle-plugin") version "0.5.25"
+        id("io.github.bitfist.jcef-gradle-plugin") version "0.5.26"
     }
 }
