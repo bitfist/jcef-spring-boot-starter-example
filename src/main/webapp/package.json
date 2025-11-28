@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
-  "packageManager": "npm@11.4.2",
+  "packageManager": "npm@11.6.4",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
